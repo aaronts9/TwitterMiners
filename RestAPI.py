@@ -7,7 +7,7 @@ import tweepy
 import sys
 import csv
 # Replace the API_KEY and API_SECRET with your application's key and secret.
-auth = tweepy.AppAuthHandler('YlxV0TG53oLZaRD4OXD1tJDv3', 'Vsc17DzrqCN0JGhyKcXNp0fNGacQRlotunmchR8OoiHeZ4Wa0T')
+auth = tweepy.AppAuthHandler('YOUR KEY', 'YOUR SECRET')
 
 api = tweepy.API(auth, wait_on_rate_limit=True,
                    wait_on_rate_limit_notify=True)
@@ -18,10 +18,10 @@ if (not api):
 
 # Continue with rest of code
 
-searchTerms = ['hotep']
+searchTerms = ['YOUR TERM']
 maxTweets = 10000000 # Some arbitrary large number
 tweetsPerQry = 100  # this is the max the API permits
-fName = 'RESThoetp.csv' # We'll store the tweets in a text file.
+fName = 'YOURCSV.csv' # We'll store the tweets in a text file.
 
 # If results from a specific ID onwards are reqd, set since_id to that ID.
 # else default to no lower limit, go as far back as API allows
