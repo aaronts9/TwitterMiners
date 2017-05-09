@@ -1,6 +1,5 @@
-setwd("/Users/AaronLum/Dropbox/#VizzingCl")
+setwd("YOUR WORKING DIRECTORY")
 
-setwd("c:/Users/Aaron/Dropbox/#VizzingCl")
 
 #read in CSV file where search tweet data frame was written to
 rawDF = read.csv(file="newCleanSEAtweets.csv")
@@ -61,4 +60,4 @@ for(tweet in rawDF$text) {
 }
 
 #write to CSV
-write.csv(df,file="")
+write.csv(df,file="YOURFILE")
