@@ -1,23 +1,19 @@
-setwd("c:/Users/Aaron/Dropbox/#VizzingCl")
+setwd("YOUR WORKING DIRECTORY")
 
 #input dataframes/csv files
-seattle = read.csv("SEAWords.csv")
-world = read.csv("WORLDWords.csv")
+df = read.csv("YOURFILE.csv")
 
 
 #Calculate sentiments based on RSentiment
 
 library(RSentiment)
-seattle$score = calculate_score(seattle$text)
-score = calculate_score(seattle$text)
-seattle$classification = calculate_sentiment(seattle$text)
-world$score = calculate_score(world)
-world$classification = calculate_sentiment(world$text)
+df$score = calculate_score(df)
+df$classification = calculate_sentiment(df$text)
 
 # sentence sentiment
 #initialize data frame to store sentence scores in
 score = data.frame()
-for (tweet in world$unlist.v.) {
+for (tweet in df$unlist.v.) {
   #store sentence sentiment in data frame
   sentimentDF = data.frame(tweet,calculate_sentiment(tweet))
   #append to total
