@@ -1,12 +1,11 @@
-setwd("c:/Users/Aaron/Dropbox/#VizzingCl")
-setwd("/Users/AaronLum/Dropbox/#VizzingCl")
+setwd("YOUR WORKING DIRECTORY")
 
 
 #twitter login stuff
 library(twitteR)
 library(ROAuth)
-consumer_key <- "YlxV0TG53oLZaRD4OXD1tJDv3"
-consumer_secret <- "Vsc17DzrqCN0JGhyKcXNp0fNGacQRlotunmchR8OoiHeZ4Wa0T"
+consumer_key <- "YOUR KEY"
+consumer_secret <- "YOUR SECRET"
 access_token <- NULL
 access_secret <- NULL
 setup_twitter_oauth(consumer_key = consumer_key,
@@ -20,7 +19,7 @@ total = data.frame()
 i = 1
 while (i < 23) {
   #searchTwitter(x =searchText, n = number, lang = language, since = starting date, until = ending date, geocode = location in coordinates)
-  dtsc <- searchTwitter("#climatechange", "#Seattle"
+  dtsc <- searchTwitter("#YOUR TERMS", "#YOUR TERMS"
                         ,n=2000, lang = "en", 
                         since = paste("2017-02-",toString(i), sep=""), 
                         until = paste("2017-02-",toString(i+1), sep=""))
@@ -32,7 +31,7 @@ while (i < 23) {
 }
 
 #output dataframe to csv
-write.csv(rawDF,file="")
+write.csv(rawDF,file="YOUR FILE")
 
 #Using Yahoo!, Where on Earth ID, trends in Seattle
 trends.df =getTrends(2490383)
